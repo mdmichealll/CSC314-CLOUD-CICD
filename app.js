@@ -3,14 +3,14 @@ const path = require('path');
 const app = express();
 const port = 8080;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'statweb')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/index.html'));
+    res.sendFile(path.join(__dirname, 'statweb/index.html'));
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/about.html'));
+    res.sendFile(path.join(__dirname, 'statweb/about.html'));
 });
 
 
